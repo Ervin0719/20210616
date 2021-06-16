@@ -33,6 +33,6 @@
         android:text="聊天室"
         android:textAlignment="center"
         android:textSize="60sp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="356dp" />
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="369dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
