@@ -35,4 +35,15 @@
         android:textSize="60sp"
         tools:layout_editor_absoluteX="30dp"
         tools:layout_editor_absoluteY="393dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="366dp"
+        android:layout_height="79dp"
+        android:text="玩家搶答"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="636dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
