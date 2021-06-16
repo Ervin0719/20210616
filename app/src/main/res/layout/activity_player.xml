@@ -34,5 +34,5 @@
         android:textAlignment="center"
         android:textSize="60sp"
         tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="369dp" />
+        tools:layout_editor_absoluteY="393dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
