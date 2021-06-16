@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/logo"
-        android:layout_width="160dp"
-        android:layout_height="108dp"
-        android:text="LOGO"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="133dp" />
-
     <EditText
         android:id="@+id/email"
         android:layout_width="wrap_content"
@@ -49,5 +41,13 @@
         android:text="註冊"
         tools:layout_editor_absoluteX="222dp"
         tools:layout_editor_absoluteY="495dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="310dp"
+        android:layout_height="331dp"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="51dp"
+        tools:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
