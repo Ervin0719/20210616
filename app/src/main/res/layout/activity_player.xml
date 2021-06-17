@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DC0D58ED"
     tools:context=".PlayerActivity">
 
 
@@ -11,7 +12,7 @@
         android:id="@+id/handv"
         android:layout_width="306dp"
         android:layout_height="205dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -24,7 +25,6 @@
         android:id="@+id/textView4"
         android:layout_width="333dp"
         android:layout_height="40dp"
-        android:layout_marginTop="10dp"
         android:text="答案"
         android:textAlignment="center"
         android:textSize="20sp"
@@ -49,12 +49,26 @@
 
     <Button
         android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:text="返回"
+        android:textColor="#050000"
+        android:textSize="20sp"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/timetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Button"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:layout_editor_absoluteX="158dp" />
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/handv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

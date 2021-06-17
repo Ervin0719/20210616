@@ -4,15 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#DC0D58ED"
     tools:context=".DrawActivity">
 
+    <TextView
+        android:id="@+id/timetext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <tw.edu.pu.o1083011.a20210616.HandPaint
         android:id="@+id/handv"
-        android:layout_width="339dp"
-        android:layout_height="415dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="359dp"
+        android:layout_height="373dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -21,22 +32,23 @@
         android:id="@+id/textView2"
         android:layout_width="369dp"
         android:layout_height="27dp"
-        android:layout_marginTop="20dp"
         android:text="題目"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/handv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/timetext2" />
 
     <Button
         android:id="@+id/backbttn"
-        android:layout_width="140dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="100dp"
-        android:text="返回"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="50dp"
+        android:text="開始"
+        android:textColor="#000000"
         android:textSize="20sp"
+        app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,11 +56,12 @@
 
     <Button
         android:id="@+id/btn"
-        android:layout_width="140dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
         android:text="清除畫布"
+        android:textColor="#0C0000"
         android:textSize="20sp"
+        app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/backbttn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

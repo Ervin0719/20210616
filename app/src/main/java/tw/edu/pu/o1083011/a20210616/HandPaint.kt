@@ -19,12 +19,11 @@ class HandPaint(context: Context?, attrs: AttributeSet?) : View(context, attrs) 
         paint.strokeCap = Paint.Cap.ROUND //線帽(線條開始區域，筆觸端點)平滑
         paint.strokeJoin = Paint.Join.ROUND //連接處圓弧
     }
-
     var path : Path = Path() //繪圖軌跡
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas.drawColor(Color.WHITE)  //背景
+        canvas.drawColor(Color.LTGRAY)  //背景
         canvas.drawPath(path, paint)
 
     }

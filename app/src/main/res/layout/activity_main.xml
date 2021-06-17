@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F000000"
+    android:background="#DC0D58ED"
     tools:context=".MainActivity">
 
     <ImageView
@@ -22,7 +22,9 @@
         android:layout_width="129dp"
         android:layout_height="47dp"
         android:text="確認"
+        android:textColor="#000309"
         android:textSize="24sp"
+        app:backgroundTint="#FFF5F9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -5,10 +5,13 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.MotionEvent
 import android.view.View
 import kotlinx.android.synthetic.main.activity_chat.*
 import kotlinx.android.synthetic.main.activity_draw.*
+import kotlinx.android.synthetic.main.activity_draw.handv
+import kotlinx.android.synthetic.main.activity_player.*
 
 class DrawActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +51,17 @@ class DrawActivity : AppCompatActivity() {
                 return true
             }
         })
-    }
+        object : CountDownTimer(30000, 1000) {
 
+            override fun onTick(millisUntilFinished: Long) {
+                timetext2.setText("倒數時間: " + millisUntilFinished / 1000)
+            }
+
+            override fun onFinish() {
+                timetext2.setText("時間到!")
+                intent = Intent(this@DrawActivity, PlayerActivity::class.java)
+                startActivity(intent)
+            }
+        }.start()
+    }
 }
