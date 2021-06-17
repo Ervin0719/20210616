@@ -4,23 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".DrawActivity">
+
+
+    <tw.edu.pu.o1083011.a20210616.HandPaint
+        android:id="@+id/handv"
+        android:layout_width="341dp"
+        android:layout_height="501dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="95dp" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="408dp"
-        android:layout_height="68dp"
+        android:layout_width="369dp"
+        android:layout_height="52dp"
         android:text="題目"
         android:textAlignment="center"
         android:textSize="48sp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="263dp" />
+        app:layout_constraintBottom_toTopOf="@+id/handv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        tools:layout_editor_absoluteX="301dp"
-        tools:layout_editor_absoluteY="341dp" />
+        android:id="@+id/backbutton"
+        android:layout_width="143dp"
+        android:layout_height="56dp"
+        android:text="返回"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="629dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,49 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".PlayerActivity">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="357dp"
-        android:layout_height="326dp"
-        android:text="畫板(畫家)"
-        android:textAlignment="center"
-        android:textSize="60sp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="42dp" />
+
+    <tw.edu.pu.o1083011.a20210616.HandPaint
+        android:id="@+id/handv"
+        android:layout_width="341dp"
+        android:layout_height="265dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56"
+        tools:ignore="MissingClass" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="363dp"
-        android:layout_height="73dp"
+        android:layout_width="357dp"
+        android:layout_height="68dp"
         android:text="答案"
         android:textAlignment="center"
         android:textSize="48sp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="399dp" />
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="331dp" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="369dp"
-        android:layout_height="134dp"
+        android:layout_width="354dp"
+        android:layout_height="238dp"
         android:text="聊天室"
         android:textAlignment="center"
         android:textSize="60sp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="559dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="送出"
-        tools:layout_editor_absoluteX="278dp"
-        tools:layout_editor_absoluteY="480dp" />
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="393dp" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="計時器"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="7dp" />
+        android:id="@+id/textView8"
+        android:layout_width="366dp"
+        android:layout_height="79dp"
+        android:text="玩家搶答"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="636dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
