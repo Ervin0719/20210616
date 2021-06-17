@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "786434453314",
+    "project_id": "draw2021ya",
+    "storage_bucket": "draw2021ya.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786434453314:android:7bb58eac3b6bc68ae222db",
+        "android_client_info": {
+          "package_name": "tw.edu.pu.o1083011.a20210616"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786434453314-qpn5gj49l2n9ankdm9n1hfcnm3k13es4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5EysjyG7Uf5ss6V-MypOUo8-jqSBaFsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786434453314-qpn5gj49l2n9ankdm9n1hfcnm3k13es4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
