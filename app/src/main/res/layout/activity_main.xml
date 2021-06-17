@@ -7,47 +7,43 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="45dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="email"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="320dp" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="Password"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="394dp" />
+        android:text="名稱"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="495dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="註冊"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="495dp" />
+        android:id="@+id/login"
+        android:layout_width="134dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="96dp"
+        android:gravity="center"
+        android:text="登錄"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="310dp"
-        android:layout_height="331dp"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="51dp"
-        tools:srcCompat="@drawable/logo" />
+        android:id="@+id/imageView3"
+        android:layout_width="355dp"
+        android:layout_height="340dp"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="42dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
