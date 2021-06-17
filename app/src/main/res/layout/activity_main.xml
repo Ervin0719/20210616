@@ -7,52 +7,38 @@
     android:background="#0F000000"
     tools:context=".MainActivity">
 
-    <EditText
+    <ImageView
+        android:id="@+id/imglogo"
+        android:layout_width="301dp"
+        android:layout_height="375dp"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="129dp"
+        android:layout_height="47dp"
+        android:text="確認"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
         android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:layout_marginBottom="45dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
+        android:layout_width="188dp"
+        android:layout_height="35dp"
+        android:gravity="center"
         android:text="名稱"
-        android:textAlignment="center"
-        android:textStyle="bold"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="134dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginBottom="96dp"
-        android:gravity="center"
-        android:text="登錄"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="355dp"
-        android:layout_height="340dp"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="42dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="500dp" />
-
+        app:layout_constraintTop_toBottomOf="@+id/imglogo"
+        app:layout_constraintVertical_bias="0.47" />
 </androidx.constraintlayout.widget.ConstraintLayout>
