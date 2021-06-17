@@ -13,9 +13,9 @@ class HandPaint(context: Context?, attrs: AttributeSet?) : View(context, attrs) 
     val paint = Paint(Paint.ANTI_ALIAS_FLAG)  //畫筆(避免踞齒)
 
     init {
-        paint.color = Color.WHITE
+        paint.color = Color.BLACK
         paint.style = Paint.Style.STROKE //描邊
-        paint.strokeWidth = 80f  //設置畫筆寬度
+        paint.strokeWidth = 10f  //設置畫筆寬度
         paint.strokeCap = Paint.Cap.ROUND //線帽(線條開始區域，筆觸端點)平滑
         paint.strokeJoin = Paint.Join.ROUND //連接處圓弧
     }
@@ -24,7 +24,7 @@ class HandPaint(context: Context?, attrs: AttributeSet?) : View(context, attrs) 
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas.drawColor(Color.BLACK)  //背景
+        canvas.drawColor(Color.WHITE)  //背景
         canvas.drawPath(path, paint)
 
     }
