@@ -21,7 +21,7 @@ class DrawActivity : AppCompatActivity() {
         backbttn.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
 
-                intent = Intent(this@DrawActivity, MainActivity::class.java)
+                intent = Intent(this@DrawActivity, SnakeGame::class.java)
                 startActivity(intent)
             }
         })
