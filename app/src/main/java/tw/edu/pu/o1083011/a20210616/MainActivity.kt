@@ -1,4 +1,5 @@
 package tw.edu.pu.o1083011.a20210616
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -7,6 +8,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_chat.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -26,9 +28,11 @@ class MainActivity : AppCompatActivity() {
         // 獲取FirebaseAuth對象的共享實例
         auth = Firebase.auth
 
+
         //註冊功能
         btnReg.setOnClickListener(object: View.OnClickListener {
             override fun onClick(p0: View?) {
+
                 email = edtEmail.text.toString()
                 password = edtPassword.text.toString()
                 flag="註冊"
@@ -49,6 +53,11 @@ class MainActivity : AppCompatActivity() {
         //登入功能
         btnLogIn.setOnClickListener(object: View.OnClickListener {
             override fun onClick(p0: View?) {
+
+                intent = Intent(this@MainActivity, ChatActivity::class.java)
+                startActivity(intent)
+
+
                 email = edtEmail.text.toString()
                 password = edtPassword.text.toString()
                 flag="登入"
@@ -64,15 +73,6 @@ class MainActivity : AppCompatActivity() {
                             updateUI(null)
                         }
                     }
-            }
-        })
-        //登出功能
-        btnLogOut.setOnClickListener(object: View.OnClickListener {
-            override fun onClick(p0: View?) {
-                Firebase.auth.signOut()
-                Toast.makeText(baseContext, "您已成功登出",
-                    Toast.LENGTH_SHORT).show()
-
             }
         })
 
