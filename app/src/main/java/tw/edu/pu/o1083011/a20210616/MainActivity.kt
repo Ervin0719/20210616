@@ -1,71 +1,60 @@
 package tw.edu.pu.o1083011.a20210616
-import android.content.ContentValues.TAG
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 
-private lateinit var auth: FirebaseAuth
-
-
 class MainActivity : AppCompatActivity() {
+
+    lateinit var auth: FirebaseAuth
+
+    lateinit var email: String
+    lateinit var password: String
+    lateinit var flag: String
+    var UID: String = ""
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        auth = FirebaseAuth.getInstance();
+        // 獲取FirebaseAuth對象的共享實例
+        auth = Firebase.auth
 
-        val auth = auth.currentUser
-
-
-
-        login.setOnClickListener(object : View.OnClickListener {
-
-            override fun onClick(v: View?) {
-
-                intent = Intent(this@MainActivity, ChatActivity::class.java)
-                startActivity(intent)
-
-
-
-
-            }
-        })
 
     }
+
+    //初始化活動時，先檢查用戶當前是否登錄
     public override fun onStart() {
         super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.getCurrentUser();
-        updateUI(currentUser);
-        //檢查
+        var user = auth.currentUser
+        if (user != null) {
+            flag = "登入"
+            updateUI(user)
+        }
     }
-    private fun signIn() {
-        //開始登錄
-        auth.signInAnonymously()
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // 如果成功
-                    Log.d(TAG, "匿名登錄成功！")
-                    val user = auth.currentUser
-                    updateUI(user)
-                } else {
-                    // 如果失敗了
-                    Log.w(TAG, "匿名登錄失敗！ 請輸入名稱！", task.exception)
+
+    private fun updateUI(fUser: FirebaseUser?) {
+        if (fUser != null) {
+            UID = fUser.uid.toString()
+            when (flag) {
+                "註冊" -> {
                     Toast.makeText(
-                        baseContext, "登錄失敗",
-                        Toast.LENGTH_SHORT
+                        baseContext, "恭喜您註冊成功\n您的UID為：" + UID,
+                        Toast.LENGTH_LONG
                     ).show()
-                    updateUI(null)
+                }
+                "登入" -> {
+                    Toast.makeText(
+                        baseContext, "恭喜您登入成功\n您的UID為：" + UID,
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
             }
-    }
-    private fun updateUI(user: FirebaseUser?) {
+        }
     }
 }
