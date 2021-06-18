@@ -11,7 +11,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_chat.*
 import kotlinx.android.synthetic.main.activity_draw.*
 import kotlinx.android.synthetic.main.activity_draw.handv
-import kotlinx.android.synthetic.main.activity_player.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class DrawActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +21,7 @@ class DrawActivity : AppCompatActivity() {
         backbttn.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
 
-                intent = Intent(this@DrawActivity, PlayerActivity::class.java)
+                intent = Intent(this@DrawActivity, MainActivity::class.java)
                 startActivity(intent)
             }
         })
@@ -59,7 +59,7 @@ class DrawActivity : AppCompatActivity() {
 
             override fun onFinish() {
                 timetext2.setText("時間到!")
-                intent = Intent(this@DrawActivity, PlayerActivity::class.java)
+                intent = Intent(this@DrawActivity, MainActivity::class.java)
                 startActivity(intent)
             }
         }.start()
